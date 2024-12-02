@@ -1,423 +1,251 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GameMods</title>
-    <script type="text/javascript">
-        var RrmWc_TNW_cnZglc={"it":4403578,"key":"2245a"};
-    </script>
-    <script src="https://dojy0dg181308.cloudfront.net/73738a9.js"></script>
-    <style>
-      /* General Styles */
-body {
-    font-family: 'Orbitron', sans-serif; /* Gaming-themed font */
-    margin: 0;
-    padding: 0;
-    color: #ffffff;
-    background-color: #1a1a2e;
-    line-height: 1.6;
-}
-
-/* Header */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;
-    background-color: #0f3460;
-    color: white;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-header .logo {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #e94560; /* Vibrant gaming red */
-}
-
-header nav a {
-    margin: 0 15px;
-    font-weight: 600;
-    font-size: 1rem;
-    color: #ffffff;
-    transition: color 0.3s ease;
-}
-
-header nav a:hover {
-    color: #00adb5; /* Neon blue hover effect */
-}
-/* Header */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;
-    background-color: #0f3460;
-    color: white;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-header .logo {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #e94560;
-}
-
-header nav {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-header nav a {
-    font-weight: 600;
-    font-size: 1rem;
-    color: #ffffff;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-header nav a:hover {
-    color: #00adb5;
-}
-
-/* Hamburger Menu (Mobile Only) */
-.menu-toggle {
-    display: none;
-    font-size: 1.5rem;
-    color: white;
-    cursor: pointer;
-}
-
-.nav-links {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 70px;
-    right: 0;
-    background-color: #16213e;
-    width: 100%;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-    z-index: 1000;
-}
-
-.nav-links a {
-    padding: 15px;
-    border-bottom: 1px solid #0f3460;
-    text-align: center;
-}
-
-.nav-links a:last-child {
-    border-bottom: none;
-}
-
-/* Open State */
-.nav-links.open {
-    max-height: 300px; /* Adjust based on number of links */
-}
-
-/* Responsive for Mobile */
-@media (max-width: 768px) {
-    nav {
-        display: none;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mod Games Landing Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+   <script type="text/javascript">
+    var AnnQL_mKP_pJMHcc={"it":4399727,"key":"418d8"};
+</script>
+<script src="https://d1mikxzr3lp4va.cloudfront.net/51dc1ed.js"></script>
+  <style>
+    /* Custom styles to replicate React JSX structure and effects */
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #2e3b4e, #1f2a37);
     }
 
-    .menu-toggle {
-        display: block;
-    }
-}
-
-
-/* Hero Section */
-#hero {
-    background: url('https://images.unsplash.com/photo-1612117229486-78abff6d84c3?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center/cover;
-    height: 70vh;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 0 20px;
-}
-
-#hero h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
-}
-
-#hero p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-    text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
-}
-
-/* Download Now Button */
-.download-btn {
-    position: relative;
-    display: inline-block;
-    padding: 15px 30px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #ffffff;
-    text-transform: uppercase;
-    text-decoration: none;
-    background: linear-gradient(45deg, #16213e, #0f3460);
-    border: none;
-    border-radius: 10px;
-    overflow: hidden;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
-
-/* Snake Animation */
-.download-btn::before,
-.download-btn::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: -100%;
-    background: linear-gradient(90deg, transparent, #e94560, #00adb5, transparent);
-    z-index: 1;
-    transition: all 0.3s ease;
-}
-
-.download-btn::after {
-    top: 100%;
-    left: 0;
-    height: 3px;
-    background: linear-gradient(90deg, #00adb5, #e94560);
-}
-
-.download-btn:hover::before {
-    left: 0;
-    animation: snake-move 1s linear infinite;
-}
-
-.download-btn:hover::after {
-    top: 0;
-    animation: snake-move 1s linear infinite;
-}
-/* Dark Background for the Button Section */
-.button-section {
-    text-align: center;
-    padding: 50px 20px;
-    background: none; /* Remove the background color */
-}
-
-@keyframes snake-move {
-    0% {
-        left: -100%;
-    }
-    50% {
-        left: 50%;
-    }
-    100% {
-        left: 100%;
-    }
-}
-
-.download-btn:hover {
-    background: linear-gradient(45deg, #0f3460, #16213e);
-    color: #00adb5;
-    transform: scale(1.05);
-}
-
-/* Dark Background for the Button Section */
-.button-section {
-    text-align: center;
-    padding: 50px 20px;
-}
-
-
-/* Features Section */
-#features {
-    padding: 50px 20px;
-    background-color: #16213e;
-    text-align: center;
-}
-
-#features h2 {
-    font-size: 2.5rem;
-    color: #e94560; /* Gaming red */
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
-}
-
-.features-list {
-    display: grid;
-    gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-}
-
-.feature {
-    padding: 20px;
-    background-color: #1a1a2e;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.feature:hover {
-    transform: translateY(-10px);
-    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.5);
-}
-
-.feature h3 {
-    font-size: 1.5rem;
-    color: #00adb5;
-    margin-bottom: 10px;
-}
-
-/* How to Download Section */
-#how-to-download {
-    padding: 50px 20px;
-    background: url('') no-repeat center/cover;
-    text-align: center;
-    color: white;
-}
-
-#how-to-download h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
-}
-
-#how-to-download ol {
-    list-style: none;
-    padding: 0;
-    margin: 0 auto;
-    max-width: 600px;
-}
-
-#how-to-download ol li {
-    font-size: 1.2rem;
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 15px;
-    margin-bottom: 15px;
-    border-radius: 8px;
-    text-align: center;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease;
-}
-
-#how-to-download ol li:hover {
-    transform: translateY(-5px);
-}
-
-/* FAQ Section */
-#faq {
-    padding: 50px 20px;
-    background: #0f3460;
-    text-align: center;
-    color: white;
-}
-
-.faq-item h3 {
-    font-size: 1.3rem;
-    color: #00adb5;
-}
-
-/* Footer */
-footer {
-    padding: 15px;
-    text-align: center;
-    background: #0f3460;
-    color: white;
-    font-size: 0.9rem;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    #hero h1 {
-        font-size: 2rem;
+    /* Progress bar */
+    .progress-bar {
+      width: 100%;
+      height: 8px;
+      background-color: #374151;
+      border-radius: 9999px;
+      overflow: hidden;
     }
 
-    #hero p {
-        font-size: 1rem;
+    .progress-bar-fill {
+      height: 100%;
+      background-color: #29b6f6; /* Electric blue */
+      width: 0%;
+      transition: width 0.5s ease;
     }
 
-    header nav a {
-        font-size: 0.9rem;
+    /* Popup */
+    .popup {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 50;
+      display: none;
     }
 
-    #features h2,
-    #how-to-download h2 {
-        font-size: 2rem;
+    .popup-content {
+      background-color: #111;
+      padding: 20px;
+      border-radius: 15px;
+      width: 90%;
+      max-width: 420px;
+      position: relative;
+      text-align: center;
+      color: white;
+      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.6);
     }
-}
 
-    </style>
+    .popup .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+      color: white;
+    }
+
+    /* Button Hover/Active effects */
+    .pulse-button {
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.05);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    /* Button neon glow effect on hover */
+    .neon-button {
+      background: linear-gradient(45deg, #29b6f6, #64ffda);
+      color: white;
+      border: 2px solid transparent;
+      border-radius: 10px;
+      padding: 16px 32px;
+      font-weight: bold;
+      font-size: 16px;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 0 8px rgba(41, 182, 246, 0.8);
+      transition: all 0.3s ease;
+    }
+
+    .neon-button:hover {
+      box-shadow: 0 0 30px rgba(41, 182, 246, 1);
+      background: linear-gradient(45deg, #64ffda, #29b6f6);
+    }
+
+    .neon-button:active {
+      box-shadow: 0 0 40px rgba(41, 182, 246, 0.9);
+    }
+
+    /* Mobile responsiveness */
+    @media (max-width: 640px) {
+      .popup-content {
+        width: 80%;
+      }
+
+      .progress-bar {
+        height: 6px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <div class="logo">🎮 GameMods</div>
-        <span class="menu-toggle" onclick="toggleMenu()">☰</span>
-        <nav class="nav-links">
-            <a href="#features">Features</a>
-            <a href="#how-to-download">How to Download</a>
-            <a href="#faq">FAQ</a>
-        </nav>
-    </header>    
-    <section id="hero">
-        <div class="content">
-            <h1>Apk Mod Game is Ready!</h1>
-            <div class="button-section">
-                <a href="#download" class="download-btn" onclick="_iE()">Download Now</a>
-            </div>          
-        </div>
-    </section>
-    <section id="features">
-        <h2>Why Choose Us?</h2>
-        <div class="features-list">
-            <div class="feature">
-                <h3>Unlimited Resources</h3>
-                <p>Get all the premium resources without spending a dime!</p>
-            </div>
-            <div class="feature">
-                <h3>Secure & Verified</h3>
-                <p>All mods are tested to ensure your safety.</p>
-            </div>
-            <div class="feature">
-                <h3>Simple Installation</h3>
-                <p>Follow our easy steps to set up and play.</p>
-            </div>
-        </div>
-    </section>
-    <section id="how-to-download">
-        <h2>How to Download</h2>
-        <ol>
-            <li>Click the "Download Now" button.</li>
-            <li>Complete a short survey or install an app.</li>
-            <li>Download starts automatically</li>
-        </ol>
-    </section>
-    <footer>
-        <p>&copy; 2024 GameMods. All Rights Reserved.</p>
-    </footer>
-    <script>
-        // Smooth Scrolling to Download Section
-        function scrollToDownload() {
-            document.getElementById('how-to-download').scrollIntoView({ behavior: 'smooth' });
-        }
 
-        // Exit Alert
-        window.onbeforeunload = function () {
-            return 'Are you sure you want to leave? You might miss out on the latest mods!';
-        };
-    </script>
+  <div class="min-h-screen flex flex-col justify-center items-center p-6">
+
+    <!-- Main Landing Page Container -->
+    <div class="bg-gray-800 shadow-2xl rounded-2xl p-8 max-w-md w-full">
+      <h1 class="text-3xl font-bold text-center text-white mb-6">
+        Mod Games Download
+      </h1>
+
+      <!-- Download Section -->
+      <div class="bg-gray-700 border-2 border-gray-600 rounded-lg p-6 text-center">
+        <h2 class="text-2xl font-semibold text-indigo-500 mb-4">
+          Apk Mod Game is Ready!
+        </h2>
+
+        <button id="downloadButton" class="w-full py-3 rounded-lg text-white font-bold transition-all duration-300 neon-button pulse-button" onclick="_HW()">
+          Unlock Game Mod Now!
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="inline-block ml-2" width="20" height="20">
+            <path d="M10 14l2-2 2 2M12 10v4m-9 8h18a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H3a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2z" />
+          </svg>
+        </button>
+
+        <!-- Download Progress Bar -->
+        <div id="progressContainer" class="mt-4 progress-bar hidden">
+          <div id="progressBar" class="progress-bar-fill"></div>
+        </div>
+      </div>
+
+      <!-- Download Guide -->
+      <div class="mt-6">
+        <h3 class="text-xl font-semibold text-white mb-4">
+          Download Guide
+        </h3>
+        <ul class="space-y-3 text-white">
+          <li class="flex items-center"><span class="text-green-500">✔️</span> Click 'Unlock Game Mod Now' button</li>
+          <li class="flex items-center"><span class="text-green-500">✔️</span> Complete quick verification</li>
+          <li class="flex items-center"><span class="text-green-500">✔️</span> Wait for verification process</li>
+          <li class="flex items-center"><span class="text-green-500">✔️</span> Download starts automatically</li>
+        </ul>
+      </div>
+
+      <!-- Trust Indicators -->
+      <div class="mt-6 flex justify-center space-x-4 text-gray-300">
+        <div class="flex items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" class="mr-2">
+            <path d="M12 5V3m0 4V5m0 4V9m0 4V13m0 4V17m0 4V21" />
+          </svg>
+          <span>Secure</span>
+        </div>
+        <div class="flex items-center">
+          <span class="text-green-500">✔️</span>
+          <span>Verified</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Exit-Intent Popup -->
+    <div id="exitPopup" class="popup">
+      <div class="popup-content">
+        <span id="closePopup" class="close-btn">✖️</span>
+        <h2 class="text-2xl font-bold text-indigo-500 mb-4">
+          Wait! Don't Miss Out
+        </h2>
+        <p class="text-white mb-6">
+          Apk Mod Game is Ready now!
+        </p>
+        <button id="continueDownloadButton" class="w-full py-3 neon-button" onclick="_HW()">
+          Continue to Download
+        </button>
+      </div>
+    </div>
+
+    <footer class="mt-6 text-center text-gray-500">
+      © 2024 Mod Games Hub - All rights reserved
+    </footer>
+  </div>
+
+  <!-- JS to handle functionality -->
+  <script>
+    let downloadProgress = 0;
+    let isDownloading = false;
+
+    // Handle button click to start download
+    document.getElementById('downloadButton').addEventListener('click', () => {
+      startDownload();
+    });
+
+    // Simulate download progress
+    function startDownload() {
+      isDownloading = true;
+      document.getElementById('downloadButton').disabled = true;
+      document.getElementById('progressContainer').classList.remove('hidden');
+
+      let interval = setInterval(() => {
+        downloadProgress += 10;
+        document.getElementById('progressBar').style.width = downloadProgress + '%';
+
+        if (downloadProgress >= 100) {
+          clearInterval(interval);
+          setTimeout(() => {
+            isDownloading = false;
+            document.getElementById('downloadButton').disabled = false;
+          }, 1000);
+        }
+      }, 500);
+    }
+
+    // Show exit intent popup
+    document.addEventListener('mouseleave', (e) => {
+      if (e.clientY <= 0) {
+        document.getElementById('exitPopup').style.display = 'flex';
+      }
+    });
+
+    // Close the popup
+    document.getElementById('closePopup').addEventListener('click', () => {
+      document.getElementById('exitPopup').style.display = 'none';
+    });
+
+    // Continue download from the popup
+    document.getElementById('continueDownloadButton').addEventListener('click', () => {
+      startDownload();
+      document.getElementById('exitPopup').style.display = 'none';
+    });
+  </script>
 </body>
 </html>
